@@ -1,5 +1,8 @@
-<head xmlns:th="http://www.w3.org/1999/xhtml">
-  <title>Log in</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Twitter Feed</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
   <link rel="stylesheet" href="/custom.css">
@@ -10,6 +13,7 @@
 
 <body>
 <div class="container">
+  <div th:replace="fragments/navbar"></div>
   <h2>Tweets</h2>
   <div th:each="tweet:${tweetList}">
     <h5>@<span th:text="${tweet.user.username}"></span>
@@ -18,4 +22,5 @@
   </div>
 </div>
 </body>
+
 </html>
